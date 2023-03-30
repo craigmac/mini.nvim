@@ -463,10 +463,6 @@ T['toggle_lines()']['stops when hook returns `false`'] = function()
 end
 
 T['Commenting']['respects `vim.b.minicomment_config`'] = function()
-  if vim.fn.has('nvim-0.7') == 0 then
-    MiniTest.skip('Function values inside buffer variables are not supported in Neovim<0.7.')
-  end
-
   set_lines({ 'aa', 'aa' })
   set_cursor(1, 0)
   reload_with_hooks()
@@ -549,10 +545,6 @@ T['Commenting current line']['applies hooks'] = function()
 end
 
 T['Commenting current line']['respects `vim.b.minicomment_config`'] = function()
-  if vim.fn.has('nvim-0.7') == 0 then
-    MiniTest.skip('Function values inside buffer variables are not supported in Neovim<0.7.')
-  end
-
   set_lines({ 'aa', 'aa' })
   set_cursor(1, 0)
   reload_with_hooks()
@@ -680,10 +672,6 @@ T['Comment textobject']['applies hooks'] = function()
 end
 
 T['Comment textobject']['respects `vim.b.minicomment_config`'] = function()
-  if vim.fn.has('nvim-0.7') == 0 then
-    MiniTest.skip('Function values inside buffer variables are not supported in Neovim<0.7.')
-  end
-
   set_lines({ '// aa', 'aa' })
   set_cursor(1, 0)
   reload_with_hooks()
